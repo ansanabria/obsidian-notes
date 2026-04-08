@@ -1,0 +1,8 @@
+{
+  "cssTheme": "Minimal",
+  "baseFontSize": 20,
+  "accentColor": "#bd488a",
+  "theme": "system",
+  "showRibbon": false,
+  "textFontFamily": "Noto Serif"
+}

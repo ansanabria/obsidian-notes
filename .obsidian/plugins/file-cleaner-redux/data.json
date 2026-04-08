@@ -1,0 +1,19 @@
+{
+  "deletionDestination": "system",
+  "obsidianTrashCleanupAge": -1,
+  "excludeInclude": 1,
+  "excludedFolders": [
+    "notes",
+    "notebooks"
+  ],
+  "attachmentsExcludeInclude": 1,
+  "attachmentExtensions": [],
+  "deletionConfirmation": true,
+  "runOnStartup": true,
+  "removeFolders": false,
+  "ignoredFrontmatter": [],
+  "ignoreAllFrontmatter": false,
+  "codeblockTypes": [],
+  "deleteEmptyMarkdownFiles": true,
+  "fileAgeThreshold": 0
+}

@@ -1,0 +1,276 @@
+{
+  "main": {
+    "id": "4f9496baac4ad929",
+    "type": "split",
+    "children": [
+      {
+        "id": "8f5704f19e12bc10",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a37273d7cd45eefe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "notes/Como Fue.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Como Fue"
+            }
+          },
+          {
+            "id": "bbbfdce1214d101f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "notes/Perfume de Gardenias - Ideas.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Perfume de Gardenias - Ideas"
+            }
+          },
+          {
+            "id": "c0c7e469be966dbe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "notes/Automatización de correos para Mantenimicros.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Automatización de correos para Mantenimicros"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "78c1426072a75ac7",
+    "type": "split",
+    "children": [
+      {
+        "id": "3473aa1a9fb10d94",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e17fa39a59125e6e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "6b4f96948ad09885",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 283.5,
+    "collapsed": true
+  },
+  "right": {
+    "id": "f2d742e890d3afa5",
+    "type": "split",
+    "children": [
+      {
+        "id": "bb2917cc9394a19a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ff18fc66e3b93f60",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "assets/Courses to follow for learning full-stack 2025-09-22 22.44.20.excalidraw.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Courses to follow for learning full-stack 2025-09-22 22.44.20.excalidraw"
+            }
+          },
+          {
+            "id": "63b3ff3bc36de3b0",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "0_notes/Introducción a las decisiones de inversión.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Introducción a las decisiones de inversión"
+            }
+          },
+          {
+            "id": "442e32c4374602f9",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "e9510cc56efa98c2",
+            "type": "leaf",
+            "state": {
+              "type": "opencode-view",
+              "state": {},
+              "icon": "opencode-logo",
+              "title": "OpenCode"
+            }
+          },
+          {
+            "id": "7bbf8812ae499729",
+            "type": "leaf",
+            "state": {
+              "type": "highlights-sidebar",
+              "state": {},
+              "icon": "highlighter",
+              "title": "Highlights"
+            }
+          },
+          {
+            "id": "2da160bda53b4713",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "dbd43a82be0eae7f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "notes/Untitled.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Untitled"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 477.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
+      "bases:Create new base": false,
+      "canvas:Create new canvas": true,
+      "templates:Insert template": true,
+      "command-palette:Open command palette": true,
+      "graph:Open graph view": true,
+      "daily-notes:Open today's daily note": false,
+      "switcher:Open quick switcher": false,
+      "omnisearch:Omnisearch": false,
+      "obsidian42-brat:BRAT": false,
+      "opencode-obsidian:OpenCode": false,
+      "file-cleaner-redux:Clean files": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "sidebar-highlights:Open highlights": false
+    }
+  },
+  "active": "c0c7e469be966dbe",
+  "lastOpenFiles": [
+    "notes/Perfume de Gardenias - Ideas.md",
+    "notes/Automatización de correos para Mantenimicros.md",
+    "notes/Cuando estoy contigo.md",
+    "notes/Como Fue.md",
+    "notes/¿Sobre mi mente?.md",
+    "notes/Citadela ongoing checklist.md",
+    "notes/Estudio para parcial 1 - Minería de Datos.md",
+    "assets/Estudio para parcial 1 - Minería de Datos 2026-03-26 14.53.33.excalidraw.md",
+    "assets",
+    "templates/0-default.md",
+    "templates/1-composer-template.md",
+    "templates/2-todo-template.md",
+    "templates/3-excalidraw.excalidraw.md",
+    "notes/Temp file.md",
+    "templates",
+    "notes",
+    "todo",
+    "notes/Un mundo Post-AGI.md",
+    "notes/Notas de reunión.md",
+    "notes/Diferencias Culturales y Fuerzas Sociales en Negocios Internacionales - Negocios Internacionales.md",
+    "notes/Negocios internacionales - Material de estudio para Parcial 1.md",
+    "notes/Supabase Auth.md",
+    "assets/Pasted Image 20250616194523_052.svg",
+    "notebook/Clippings notebook.md",
+    "excalidraw/Citadela wireframe.excalidraw.md",
+    "excalidraw/Drawing 2026-03-13 12.27.40.excalidraw.md",
+    "excalidraw/Drawing 2026-02-21 13.15.16.excalidraw.md",
+    "excalidraw/Turborepo env variable diagram.md",
+    "excalidraw/Drawing 2026-02-06 16.18.11.excalidraw.md",
+    "excalidraw/Escrito Alicia Linea Narrativa.md",
+    "excalidraw/Drawing 2026-02-05 10.56.55.excalidraw.md",
+    "assets/Pasted Image 20260221135005_037.png",
+    "assets/Pasted Image 20260221133857_838.png",
+    "copilot/copilot-custom-prompts",
+    "copilot",
+    "assets/Pasted Image 20260115202850_629.png",
+    "assets/Convex notes-1768419859063.webp",
+    "assets/Convex notes-1768414871288.webp",
+    "assets/React learning docs notes-1767121706597.webp",
+    "assets/Pasted Image 20251202165459_161.png",
+    "assets/Remapping - Swap Ctrl and Caps Lock key on the kernel level-1753203009754.webp",
+    "assets/Pasted Image 20251202163438_252.svg",
+    "notes/Untitled 3.base",
+    "notes/Untitled 1.base",
+    "notes/Untitled.base",
+    "notes/Untitled 4.base",
+    "Untitled.canvas"
+  ]
+}
