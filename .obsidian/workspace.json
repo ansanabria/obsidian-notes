@@ -11,10 +11,12 @@
             "id": "cce763b3f89116ae",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2026-04-14 22.00.41.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2026-04-14 22.00.41.excalidraw"
             }
           }
         ]
@@ -193,6 +195,8 @@
   },
   "active": "cce763b3f89116ae",
   "lastOpenFiles": [
+    "Excalidraw/Drawing 2026-04-14 22.00.41.excalidraw.md",
+    "Excalidraw",
     "notes/Como Fue.md",
     "notes/Perfume de Gardenias - Ideas.md",
     "notes/Automatización de correos para Mantenimicros.md",
@@ -223,7 +227,6 @@
     "excalidraw/Turborepo env variable diagram.md",
     "excalidraw/Drawing 2026-02-06 16.18.11.excalidraw.md",
     "excalidraw/Escrito Alicia Linea Narrativa.md",
-    "excalidraw/Drawing 2026-02-05 10.56.55.excalidraw.md",
     "assets/Pasted Image 20260221135005_037.png",
     "assets/Pasted Image 20260221133857_838.png",
     "copilot/copilot-custom-prompts",
@@ -238,7 +241,6 @@
     "notes/Untitled 3.base",
     "notes/Untitled 1.base",
     "notes/Untitled.base",
-    "notes/Untitled 4.base",
     "Untitled.canvas"
   ]
 }
