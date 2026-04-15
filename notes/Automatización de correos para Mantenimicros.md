@@ -47,15 +47,15 @@ Proveedores envían inventario y clientes envían pedidos por email. El sistema 
 
 ```mermaid
 flowchart LR
-    Email --> Ingesta --> LLM --> BD
-    BD --> Matching --> Alertas
-    BD --> Dashboard
+    Email --> Ingesta --> LLM --> BaseDeDatos
+    BaseDeDatos --> Matching --> Alertas
+    BaseDeDatos --> Dashboard
 ```
 
 Flujo lineal y simple:
 1. **Ingesta** recibe el email
 2. **LLM** extrae los datos (marca, modelo, cantidad, precio)
-3. **BD** guarda inventario u orden
+3. **Base de datos** guarda inventario u orden
 4. **Matching** cruza oferta con demanda
 5. **Dashboard** y **Alertas** muestran resultados
 
@@ -106,7 +106,7 @@ erDiagram
         int proveedor_id FK
         string marca
         string modelo
-        string sku
+        string numero_de_parte
         int cantidad
         decimal precio
     }
@@ -176,7 +176,7 @@ sequenceDiagram
 
 ```mermaid
 flowchart LR
-    Inventario --> E[Exacto: mismo SKU]
+    Inventario --> E[Exacto: mismo número de parte]
     Inventario --> S[Similar: embeddings]
     Orden --> E
     Orden --> S
@@ -187,22 +187,117 @@ flowchart LR
 ```
 
 Tres niveles de matching:
-- **Exacto**: mismo SKU o modelo
+- **Exacto**: mismo número de parte o modelo
 - **Similar**: por embeddings (ej: "ThinkPad T14" ≈ "ThinkPad T14s")
 - **Sin coincidencia**: se registra como faltante para negociar con proveedores
 
 ---
 
-## 8. Stack Sugerido (para empezar rápido)
+## 8. Stack Local con n8n
 
-| Componente        | Herramienta           |
-| ----------------- | --------------------- |
-| Ingesta de emails | n8n + Gmail API       |
-| LLM               | OpenAI GPT-4          |
-| Base de datos     | PostgreSQL + pgvector |
-| Backend/API       | Node.js / FastAPI     |
-| Dashboard         | Next.js               |
-| Alertas           | Email / Slack         |
+Sí, es completamente factible correr n8n de forma local. n8n es una plataforma de automatización de código abierto que se auto-hospeda fácilmente con Docker. Tiene nodos nativos para leer emails, llamar LLMs, conectarse a bases de datos y enviar notificaciones, por lo que puede orquestar todo el flujo sin necesidad de un backend separado.
+
+n8n ofrece un **Self-hosted AI Starter Kit**: un `docker-compose.yml` que levanta n8n + Ollama + Qdrant + PostgreSQL de una sola vez. Es el punto de partida ideal para este proyecto, porque ya incluye todo lo que necesitamos: automatización, LLM local, base de datos vectorial y base de datos relacional.
+
+### Componentes del Stack
+
+| Componente | Herramienta | Función en el flujo |
+|------------|-------------|---------------------|
+| Orquestación | n8n (Docker) | Ejecuta todo el workflow: lee email → LLM → guarda → matching → notifica |
+| LLM | Ollama (Docker) o OpenAI API | Extrae datos estructurados de los emails |
+| Base de datos | PostgreSQL (Docker) | Inventario, órdenes, oportunidades |
+| Base vectorial | Qdrant (Docker) | Embeddings para matching semántico |
+| Dashboard | Next.js o n8n mismo | Visualización de oportunidades |
+| Alertas | n8n (nodoficación propia) | Email, Slack, WhatsApp |
+
+### Por qué n8n local funciona para este caso
+
+- **Nodos de email nativos**: Gmail Trigger e IMAP Trigger leen emails automáticamente sin código
+- **Nodo OpenAI/Ollama**: llama al LLM directamente desde el workflow
+- **Nodo PostgreSQL**: lee y escribe en la base de datos sin backend intermedio
+- **Nodo HTTP Request**: llama a Qdrant para embeddings y búsqueda vectorial
+- **Nodo Code (JavaScript)**: escribe lógica de matching customizada adentro del workflow
+- **Ejecución local**: todo corre en tu computador, sin costos de cloud
+- **UI visual**: ves y editas el flujo completo con drag and drop
+
+### Limitaciones a considerar
+
+- **Escalabilidad**: en un computador personal, el límite es la memoria y CPU. Para volúmenes altos (>500 emails/día), convendría migrar a un servidor dedicado
+- **Disponibilidad**: si el computador se apaga, los workflows se pausan. n8n reanuda automáticamente al reiniciar, pero hay ventana de tiempo sin procesamiento
+- **GPU para LLM local**: Ollama funciona mejor con GPU. Sin GPU, se puede usar OpenAI API como alternativa y sigue corriendo n8n de forma local
+
+### Docker Compose de referencia
+
+```yaml
+# docker-compose.yml — basado en el AI Starter Kit de n8n
+services:
+  n8n:
+    image: docker.n8n.io/n8nio/n8n
+    ports:
+      - "5678:5678"
+    environment:
+      - DB_TYPE=postgresdb
+      - DB_POSTGRESDB_HOST=postgres
+      - DB_POSTGRESDB_PORT=5432
+      - DB_POSTGRESDB_DATABASE=n8n
+      - DB_POSTGRESDB_USER=n8n
+      - DB_POSTGRESDB_PASSWORD=n8n
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
+    volumes:
+      - n8n_data:/home/node/.n8n
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:16
+    environment:
+      - POSTGRES_USER=n8n
+      - POSTGRES_PASSWORD=n8n
+      - POSTGRES_DB=n8n
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  ollama:
+    image: ollama/ollama
+    volumes:
+      - ollama_data:/root/.ollama
+    ports:
+      - "11434:11434"
+
+  qdrant:
+    image: qdrant/qdrant
+    volumes:
+      - qdrant_data:/qdrant/storage
+    ports:
+      - "6333:6333"
+
+volumes:
+  n8n_data:
+  postgres_data:
+  ollama_data:
+  qdrant_data:
+```
+
+Para levantar todo: `docker compose up -d`. n8n queda en `http://localhost:5678`.
+
+### Workflow en n8n (vista conceptual)
+
+```mermaid
+flowchart LR
+    A[Gmail Trigger / IMAP Trigger] --> B[Clasificar email: proveedor o cliente]
+    B --> C[OpenAI / Ollama: extraer datos]
+    C --> D[PostgreSQL: guardar inventario u orden]
+    D --> E[Code Node: lógica de matching]
+    E --> F{Encontró coincidencia?}
+    F -->|Si| G[PostgreSQL: crear oportunidad]
+    F -->|No| H[PostgreSQL: registrar faltante]
+    G --> I[Notificar: email / Slack]
+    H --> J[Reporte de faltantes]
+```
+
+Cada nodo del diagrama es un nodo nativo de n8n. No hay que escribir un backend separado: el workflow de n8n es el backend.
 
 ---
 
@@ -215,7 +310,7 @@ flowchart LR
     C --> D[Fase 4: Optimizar<br/>4 semanas]
 ```
 
-- **Fase 1** — Ingesta de emails + extracción con LLM + BD básica
+- **Fase 1** — Ingesta de emails + extracción con LLM + base de datos básica
 - **Fase 2** — Matching exacto + notificaciones + dashboard
 - **Fase 3** — Matching semántico con embeddings + scoring + reportes de faltantes
 - **Fase 4** — Predicción de demanda + integración con ERP/contabilidad
@@ -239,7 +334,7 @@ Analiza el siguiente email y extrae información estructurada.
 TIPO DE EMAIL: [PROVEEDOR o CLIENTE]
 
 Si es PROVEEDOR, extrae:
-- Lista de productos: marca, modelo, SKU, cantidad, precio, condición
+- Lista de productos: marca, modelo, número de parte, cantidad, precio, condición
 
 Si es CLIENTE, extrae:
 - Producto solicitado: marca, modelo/especificaciones, cantidad, presupuesto, urgencia
