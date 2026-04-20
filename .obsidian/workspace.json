@@ -34,6 +34,18 @@
             }
           },
           {
+            "id": "8474af13a928d2b5",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2026-04-20 11.19.49.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2026-04-20 11.19.49.excalidraw"
+            }
+          },
+          {
             "id": "182e11420135c175",
             "type": "leaf",
             "state": {
@@ -44,7 +56,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -218,9 +230,10 @@
       "sidebar-highlights:Open highlights": false
     }
   },
-  "active": "fc7f5e04579a94a8",
+  "active": "8474af13a928d2b5",
   "lastOpenFiles": [
     "notes/Temp - Juego Gerencial.md",
+    "Excalidraw/Drawing 2026-04-20 11.19.49.excalidraw.md",
     "Excalidraw/Drawing 2026-04-14 22.00.41.excalidraw.md",
     "assets/Pasted Image 20260414223252_700.png",
     "assets/Pasted Image 20260414221755_556.png",
@@ -253,7 +266,6 @@
     "excalidraw/Drawing 2026-03-13 12.27.40.excalidraw.md",
     "excalidraw/Drawing 2026-02-21 13.15.16.excalidraw.md",
     "excalidraw/Turborepo env variable diagram.md",
-    "excalidraw/Drawing 2026-02-06 16.18.11.excalidraw.md",
     "assets/Pasted Image 20260221135005_037.png",
     "assets/Pasted Image 20260221133857_838.png",
     "copilot/copilot-custom-prompts",
