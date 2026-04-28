@@ -1,5 +1,5 @@
 {
-  "format": "YYYY.MM.DD",
+  "format": "ddd DD MMM YYYY",
   "folder": "todo",
   "template": "templates/2-todo-template",
   "autorun": false
