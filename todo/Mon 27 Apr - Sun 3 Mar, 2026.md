@@ -10,9 +10,9 @@ date: "27.04.2026"
 ## 27 Mon
 
 - **[[Clase - Consultoría]]**
-	- [ ] Crear workflow de creación de videos.
+	- [x] Crear workflow de creación de videos.
 - **[[Clase - Juego Gerencial]]**
-	- [ ] Completar simulación de la semana.
+	- [x] Completar simulación de la semana.
 
 ## 28 Tue
 
