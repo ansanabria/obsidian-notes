@@ -17,7 +17,7 @@ date: "27.04.2026"
 ## 28 Tue
 
 - **[[Clase - CBU Colombia]]**
-	- [ ] Entregar narrativa.
+	- [x] Entregar narrativa.
 
 ## 29 Wed
 
@@ -31,11 +31,10 @@ date: "27.04.2026"
 
 ## 1 Fri
 
+- **[[Clase - Consultoría]]**
+	- [ ] Grabar video horizontal de Jhoan.
 
 ## 2 Sat
 
 
 ## 3 Sun
-
-- **[[Clase - Consultoría]]**
-	- [ ] Grabar video horizontal de Jhoan.
