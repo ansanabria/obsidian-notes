@@ -11,12 +11,28 @@ drawings, pasted assets, and local editor/plugin configuration.
 - `todo/` contains dated task lists.
 - `templates/` contains Markdown templates used when creating new notes,
   including default notes, composer notes, todo notes, and Excalidraw notes.
-- `Excalidraw/` contains Excalidraw drawings stored as Markdown files with
+- `excalidraw/` contains Excalidraw drawings stored as Markdown files with
   compressed drawing data.
 - `assets/` contains pasted images referenced by notes.
 - `.obsidian/` contains Obsidian configuration, plugins, and themes.
 - `.hinote/` contains metadata, highlights, and flashcard-related data.
 - `.agents/` and `skills-lock.json` are local agent/skill metadata.
+
+## Normal Note Frontmatter
+
+Normal note files should follow the default note template in
+`templates/0-default.md`. They should start with frontmatter containing both
+`notebook` and `tags`:
+
+```yaml
+---
+notebook:
+tags:
+---
+```
+
+Keep these fields present even when they are empty. Add additional frontmatter
+fields only when the note type already uses them or the user asks for them. When you work with a new note, fill the frontmatter fields.
 
 ## Editing Guidelines
 
@@ -40,3 +56,7 @@ Use `rg` to search notes and references quickly.
 
 When summarizing this repository, describe it as a personal knowledge vault with
 notes, todos, templates, Excalidraw drawings, and pasted assets.
+
+## Rules
+
+- Always read at least the Obsidian Markdown skill.

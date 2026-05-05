@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "todo/Mon 27 Apr - Sun 3 Mar, 2026.md",
+                "file": "notes/Codex CLI - MCP Plugins and Skills.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Mon 27 Apr - Sun 3 Mar, 2026"
+              "title": "Codex CLI - MCP Plugins and Skills"
             }
           }
         ]
@@ -61,7 +61,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 283.5
+    "width": 283.5,
+    "collapsed": true
   },
   "right": {
     "id": "f2d742e890d3afa5",
@@ -194,13 +195,30 @@
       "sidebar-highlights:Open highlights": false
     }
   },
-  "active": "e17fa39a59125e6e",
+  "active": "f1b96116c6bda3f3",
   "lastOpenFiles": [
+    "notes/Codex CLI Fundamentals.md",
+    "notes/Codex CLI - MCP Plugins and Skills.md",
+    "AGENTS.md",
+    "notes/Codex CLI - Safety and Troubleshooting.md",
+    "notes/Codex CLI - Automation.md",
+    "notes/Codex CLI - Review and Apply Changes.md",
+    "notes/Codex CLI - Prompting Patterns.md",
+    "notes/Codex CLI - Daily Workflow.md",
+    "notes/Codex CLI - Models and Web Search.md",
+    "notes/Codex CLI - Configuration.md",
+    "notes/Codex CLI - AGENTS.md Instructions.md",
+    "notes/Codex CLI - Sandbox and Approvals.md",
+    "notes/Codex CLI - Working Directory and Scope.md",
+    "notes/Codex CLI - Main Commands.md",
+    "notes/Codex CLI - Core Modes.md",
+    "notes/Codex CLI - Installation and Login.md",
+    "notes/Codex CLI - What It Is For.md",
+    "templates/0-default.md",
+    "todo/Mon 27 Apr - Sun 3 Mar, 2026.md",
     "notes/Israel.md",
     "notes/Untitled.md",
-    "AGENTS.md",
     "skills-lock.json",
-    "todo/Mon 27 Apr - Sun 3 Mar, 2026.md",
     "notes/Mesías.md",
     "todo/2026.04.27.md",
     "excalidraw/Drawing 2026-04-14 22.00.41.excalidraw.md",
@@ -209,27 +227,10 @@
     "assets/Pasted Image 20260414223252_700.png",
     "assets/Pasted Image 20260414221755_556.png",
     "excalidraw",
-    "notes/Como Fue.md",
-    "notes/Perfume de Gardenias - Ideas.md",
-    "notes/Automatización de correos para Mantenimicros.md",
-    "notes/Cuando estoy contigo.md",
-    "notes/¿Sobre mi mente?.md",
-    "notes/Citadela ongoing checklist.md",
-    "notes/Estudio para parcial 1 - Minería de Datos.md",
-    "assets/Estudio para parcial 1 - Minería de Datos 2026-03-26 14.53.33.excalidraw.md",
     "assets",
-    "templates/0-default.md",
-    "templates/1-composer-template.md",
-    "templates/2-todo-template.md",
-    "templates/3-excalidraw.excalidraw.md",
-    "notes/Temp file.md",
     "templates",
     "notes",
     "todo",
-    "notes/Un mundo Post-AGI.md",
-    "notes/Notas de reunión.md",
-    "notes/Diferencias Culturales y Fuerzas Sociales en Negocios Internacionales - Negocios Internacionales.md",
-    "notes/Negocios internacionales - Material de estudio para Parcial 1.md",
     "assets/Pasted Image 20250616194523_052.svg",
     "assets/Pasted Image 20260221135005_037.png",
     "assets/Pasted Image 20260221133857_838.png",
