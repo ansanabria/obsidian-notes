@@ -76,8 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 283.5,
-    "collapsed": true
+    "width": 283.5
   },
   "right": {
     "id": "f2d742e890d3afa5",
@@ -141,8 +140,8 @@
             "state": {
               "type": "opencode-view",
               "state": {},
-              "icon": "opencode-logo",
-              "title": "OpenCode"
+              "icon": "lucide-ghost",
+              "title": "opencode-view"
             }
           },
           {
@@ -151,8 +150,8 @@
             "state": {
               "type": "highlights-sidebar",
               "state": {},
-              "icon": "highlighter",
-              "title": "Highlights"
+              "icon": "lucide-ghost",
+              "title": "highlights-sidebar"
             }
           },
           {
@@ -194,7 +193,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-git:Open Git source control": false,
       "bases:Create new base": false,
       "canvas:Create new canvas": true,
       "templates:Insert template": true,
@@ -205,6 +203,7 @@
       "omnisearch:Omnisearch": false,
       "obsidian42-brat:BRAT": false,
       "opencode-obsidian:OpenCode": false,
+      "obsidian-git:Open Git source control": false,
       "file-cleaner-redux:Clean files": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "sidebar-highlights:Open highlights": false
